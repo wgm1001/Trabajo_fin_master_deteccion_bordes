@@ -1,4 +1,4 @@
-# TFM-FIS-IA
+# Trabajo_fin_master_deteccion_bordes
 
 **Desarrollo de un prototipo de delimitación automática de parcelas a partir de imágenes de satélite.**
 
