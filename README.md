@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d860ec15-5bf8-41d1-9611-7fc46d230dd4)# TFM-FIS-IA
+# TFM-FIS-IA
 
 **Desarrollo de un prototipo de delimitación automática de parcelas a partir de imágenes de satélite.**
 
