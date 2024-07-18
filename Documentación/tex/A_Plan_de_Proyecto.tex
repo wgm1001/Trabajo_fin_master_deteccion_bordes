@@ -1,0 +1,117 @@
+\apendice{Plan de Proyecto Software}
+
+En este apéndice se describirá la planificación que se ha seguido a la hora de organizar el proyecto, tanto desde la perspectiva temporal y cómo se ha distribuido el trabajo como desde un estudio de la viabilidad del mismo.
+
+\section{Planificación temporal}
+
+La organización temporal de este trabajo se ha realizado mediante Sprints de una duración variable entre 1 y 2 semanas, en función de la carga de trabajo de cada uno de ellos.
+
+\subsection{\textit{Sprint} 1}
+Este se dedico a la lectura de los artículos científicos y la interiorización de los contenidos expuestos.
+
+\subsection{\textit{Sprint} 2}
+En este se Inicio un proceso de familiarización con los datos, tratando de visualizarlos y comprender sus estructuras internas.
+
+\subsection{\textit{Sprint} 3}
+En este Sprint se inicio el Notebook y se aplicaron los conocimientos de la fase anterior, componiendo las imágenes y capas.
+
+\subsection{\textit{Sprint} 4}
+Este sprint fue dedicado a la creación y entrenamiento de los modelos sin contexto de los pixeles adyacente, es decir KNN, SVM y Random Forest. Además de medir sus métricas.
+
+\subsection{\textit{Sprint} 5}
+Este sprint fue dedicado al desarrollo del modelo de la red U-Net.
+
+\subsection{\textit{Sprint} 6}
+Este fue dedicado al entrenamiento y visualización de las primeras predicciones.
+
+\subsection{\textit{Sprint} 7}
+Este Sprint finalmente fue dedicado a la evaluzación de los modelos de la red U-Net.
+
+\section{Estudio de viabilidad}
+
+En este apartado se va a comentar la viabilidad del proyecto tanto de forma económica, calculando el coste total que debería de haber costado el desarrollo del proyecto, y la viabilidad legal de las librerías y herramientas utilizadas.
+
+\subsection{Viabilidad económica}
+
+En este subapartado se encuentran los cálculos económicos del proyecto general.
+Estos son los derivados del equipo y personal necesarios para la realización del mismo ya que el resto de los materiales son de libre acceso.
+
+Para realizar el cálculo se han divido los gastos en:
+\begin{itemize}
+	\item \textbf{Coste personal} (tabla~\ref{tab:costes_personal}): contratación del personal de investigación y desarrollo del proyecto.
+	\item \textbf{Coste \textit{hardware}} (tabla~\ref{tab:costes_hardware}): dispositivos \textit{hardware} necesarios en el proyecto.
+\end{itemize}
+
+\begin{table}\centering
+	\begin{tabular}[]{@{}l r@{}}
+		\toprule
+		\textbf{Concepto} & \textbf{Coste (\euro{})} \\
+		\midrule
+		Salario mensual bruto & 2.047,78 \\
+		Seguridad Social (30,04\%) & 615,15 \\
+		Retención IRPF (2\%) & 28,65 \\
+		Salario mensual neto & 1.403,97 \\\hubu
+		\textbf{Total 3 meses } &  6.143,34 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Costes de personal.}
+	\label{tab:costes_personal}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}[]{@{}l c r@{}}
+		\toprule
+		\textbf{Concepto} & \textbf{Coste (\euro{})} \\
+		\otoprule
+		Ordenador de desarrollo (x1) & 950 \\\hubu
+		\textbf{Total} & 950 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Costes de \textit{hardware}.}
+	\label{tab:costes_hardware}
+\end{table}
+
+Finalmente se ha realizado un cálculo final del coste del proyecto, tabla~\ref{tab:coste_final}.
+
+\begin{table}
+	\centering
+	\begin{tabular}[]{@{}l r@{}}
+		\toprule
+		\textbf{Tipo} & \textbf{Coste (\euro{})}\\
+		\otoprule
+		Personal  & 6.143,34 \\
+		\textit{Hardware}& 950 \\\hubu
+		\textbf{Total}&7.093,34\\
+		\bottomrule
+	\end{tabular}
+	\caption{Costes final.}
+	\label{tab:coste_final}
+\end{table}
+
+\subsection{Viabilidad legal}
+En este subapartado se van a comentar las distintas licencias que tienen las herramientas y librerías utilizadas en el proyecto, así como se comenta la licencia final que tiene el proyecto.
+
+Las licencias de las librerías y herramientas utilizadas en el desarrollo del proyecto se pueden ver en la tabla~\ref{tab:lic}.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lc}
+		\toprule
+		\textbf{Librería-Herramienta}&\textbf{Licencia}\\
+		\midrule
+		\textit{Numpy} & BSD 3\\
+		\textit{Matplotlib} &  PSF\\
+		\textit{Seaborn} & BSD 3\\
+		\textit{Python} & PSF\\
+		\textit{Scikit-learn} & BSD 3\\
+		\textit{Tensorflow} & Apache 2.0\\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla con las licencias de las librerías y herramientas utilizadas.}
+	\label{tab:lic}
+\end{table}
+
+Teniendo en cuenta estas licencias, las licencias de las herramientas usadas tanto en la aplicación final de rehabilitación y las licencias de las herramientas y librerías usadas por el compañero se ha decido utilizar la licencia \textit{GPL v3.0} a partir de las licencias más restrictivas.
+
+Con esta licencia \textit{GPL v3.0} se puede utilizar el \textit{software} desarrollado para uso comercial, se puede modificar las implementaciones realizadas,  distribuirlas, realizar patentes sobre ellas y usarlas de forma privada.

@@ -1,0 +1,21 @@
+\apendice{Manual de programador}
+En este manual se indicarán los pasos a seguir para la ejecución del Notebook.
+
+Lo primero que se ha de hacer tener instalado o instalar Python, preferentemente en su versión 3.11.5 que es en la que se ha desarrollado, aunque seguramente no den problemas versiones más nuevas.
+
+Tras lo cual será necesario instalar Jupyter Notebook. La forma sencilla sería hacer, la guía propia de Jupyter se encuentra en el siguiente \href{https://jupyter.org/install}{enlace}:
+pip install jupyterlab
+
+Una vez instalado se debe iniciar mediante el comando jupyter notebook, al ejecutarlo se proveerá de un enlace para navegar desde el programa. 
+
+Se ha de clonar el \href{https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes}{repositorio de del proyecto} de gitHub o bien descargarlo.
+
+Como se ha comentado previamente los datos se obtienen del proyecto \textit{``AI4Boundaries: an open AI-ready dataset to map field boundaries with Sentinel-2 and aerial photography''}\cite{AI4boundaries}, concretamente del  \href{https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/DRLsL/AI4BOUNDARIES/}{repositorio de datos} del proyecto.
+
+Para una ejecución similar a la del proyecto y sin tiempos excesivos se recomienda escoger solo los datos que inician por ES.
+
+Una vez descargados Las imágenes .nc de entrenamiento las almacenamos en la carpeta ``/data/trainES/'', las de test en la carpeta ``/data/test/'' y las máscaras de capa de los resultados \textit{ground truth} en la carpeta ``/data/maskES/'' para las de los datos de entrenamiento y ``/data/maskTestEs/'' para el test.
+
+También el archivo ``ES\_126\_S2\_10m\_256'' tanto .nc como .tif en la carpeta data ya que es el que se ha utilizado para todas las visualizaciones.
+
+Una vez están todos los archivos en su correspondiente localización, desde el navegaro en la aplicación de Jupyter se ha de navegar hasta en archivo ipynb. Ya se pueden correr de manera secuencial todas las celdas menos la del SVM. La primera vez que se ejecuten se han de entrenar los modelos. en posteriores ejecuciones con ejecutar las celdas en las que se cargan debiera bastar para usarlos. No se pueden subir al repositorio los modelos entrenados  por su tamaños excesivo.

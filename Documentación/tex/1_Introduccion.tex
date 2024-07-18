@@ -1,0 +1,40 @@
+\chapter{Introducción}
+
+En la actualidad, en el contexto de la agricultura, los límites de las parcelas son un aspecto muy relevante, ya que nos permiten conocer la extensión de cada tipo de cultivo y su ubicación. Además, estos límites son fundamentales para cuestiones relacionadas con la propiedad de los terrenos y los posibles impuestos asociados.
+
+El problema radica en que estos límites son cambiantes por diversos motivos, como pueden ser los cambios de propiedad o la unión de varios terrenos para cultivar el mismo tipo de cultivo. Si bien existen registros de la propiedad que dividen los terrenos en muchos países, estos no siempre representan la realidad de los terrenos, no cubren la totalidad de los terrenos del mundo y pueden ser complejos de consultar y analizar de forma automática.
+
+Para abordar este problema, los autores del artículo \textit{``AI4Boundaries: an open AI-ready dataset to map field boundaries with Sentinel-2 and aerial photography''}\cite{AI4boundaries} recopilaron una serie de imágenes satelitales, las clasificaron y realizaron una separación de los terrenos en base a las bases de datos regionales de cada uno de los países involucrados. Estas imágenes proceden de Austria, España (concretamente de Cataluña), Francia, Luxemburgo, Países Bajos, Eslovenia y Suecia, y se han obtenido a partir del satélite Sentinel 2 y de ortofotos extraídas del ``Geospatial Aid Application (GSAA)''. En total, se cuenta con 7.831 muestras, cada una de ellas acompañada de la delimitación correspondiente.
+
+En este trabajo, se han utilizado las imágenes del satélite Sentinel 2, las cuales están compuestas por 5 bandas espectrales: las bandas RGB (rojo, verde y azul), una banda infrarroja y la banda NDVI (Normalised Difference Vegetation Index), que muestra la cantidad de vegetación visible.
+
+A partir de estos datos, se ha procedido a procesar la información y entrenar diversos modelos de inteligencia artificial para comprobar su eficacia en la tarea de detección de los límites de las parcelas. Se ha puesto especial énfasis en el entrenamiento de una red neuronal convolucional de tipo U-Net, debido tanto a los resultados obtenidos en trabajos previos como a la concepción teórica de que es la más adecuada para el contexto del problema.
+
+\section{Motivación y relevancia del problema}
+La detección precisa de los límites de las parcelas agrícolas es fundamental para una amplia gama de aplicaciones en el sector agrícola. Algunos de los principales beneficios y aplicaciones de esta tecnología incluyen:
+
+\begin{itemize}
+	\item\textbf{Gestión eficiente de los cultivos}: Conocer con precisión los límites de las parcelas permite a los agricultores y gestores de tierras planificar y administrar de manera más eficiente los diferentes cultivos, optimizando el uso de recursos como agua, fertilizantes y pesticidas.
+
+	\item\textbf{Monitoreo de la producción y los rendimientos}: La delimitación de las parcelas facilita el seguimiento de la producción y los rendimientos de cada cultivo, lo que permite tomar decisiones informadas sobre la gestión de la explotación agrícola.
+
+	\item\textbf{Cumplimiento normativo y subvenciones}: En muchos países, los límites de las parcelas son fundamentales para el cumplimiento de las normativas agrícolas y la solicitud de subvenciones y ayudas gubernamentales.
+
+	\item\textbf{Análisis de cambios en el uso del suelo}: La detección de los límites de las parcelas a lo largo del tiempo permite analizar los cambios en el uso del suelo, lo que es crucial para la planificación y la toma de decisiones en el ámbito de la agricultura y el desarrollo rural.
+
+	\item\textbf{Catastro y gestión de la propiedad}: La delimitación precisa de las parcelas es esencial para los registros catastrales y la gestión de la propiedad de la tierra.
+	Dada la importancia de este problema, el desarrollo de soluciones eficientes y automatizadas para la detección de los límites de las parcelas agrícolas a partir de imágenes satelitales es un área de investigación de gran relevancia y con un gran potencial de impacto en el sector agrícola.
+	
+\end{itemize}
+
+\section{Estructura del documento}
+Este trabajo de fin de máster se estructura de la siguiente manera:
+\begin{itemize}
+	\item\textbf{Introducción}: Se presenta el contexto y la relevancia del problema de la detección de los límites de las parcelas agrícolas, así como los objetivos del trabajo.
+	\item\textbf{Objetivos}: Se detallan los objetivos principales y específicos del proyecto.
+	\item\textbf{Conceptos teóricos}: Se abordan los conceptos teóricos relevantes para el desarrollo del proyecto.
+	\item\textbf{Técnicas y herramientas}: Se describen las técnicas y herramientas utilizadas en el desarrollo del proyecto.
+	\item\textbf{Aspectos relevantes del desarrollo del proyecto}: Se presentan los detalles más relevantes del proceso de desarrollo.
+	\item\textbf{Trabajos relacionados}: Se revisan los trabajos previos relacionados con la detección de bordes de parcelas a partir de imágenes satelitales.
+	\item\textbf{Conclusiones y líneas de trabajo futuras}: Se resumen las principales conclusiones del trabajo y se plantean posibles líneas de investigación futuras.
+\end{itemize}

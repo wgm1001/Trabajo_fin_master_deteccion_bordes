@@ -1,0 +1,56 @@
+\chapter{Conclusiones y lineas de trabajo futuras}
+En este apartado se hará una rendición de cuentas respecto a los objetivos marcados, se explicarán las conclusiones que se han extraído y finalmente se comentarán posibles líneas de trabajo futuras.
+
+\section{Conclusiones}
+Las conclusiones que podemos obtener de este proyecto son las siguientes:
+
+\begin{itemize}
+	\item Las redes neuronales convolucionales son una herramienta muy útil para la clasificación de imágenes. Si bien hay otros modelos capcaes de realizar la tarea de manera apróximada este es el mejor de los probados.
+	
+	\item Existen técnicas automáticas para la separación automática de parcelas capaces de realizar la tarea satisfactoriamente.
+
+\end{itemize}
+
+\section{Rendición de cuentas}
+Se expondrán en esta sección los objetivos marcados en el episodio previo y se comentará el estado de los mismos.
+
+\begin{itemize}
+	\item Entrenar un modelo capaz de realizar una separación suficiente de parcelas en base a una imagen satelital. 
+	
+	Se da por cumplido este objetivo, si bien es relativo que se entiende por suficiente, se consideran suficientemente buenos los resultados obtenidos.
+	
+	\item Probar diferentes métodos y configuraciones de cara a comprobar si realmente la red neuronal convolucional es el método más potente o pueden ser más interesantes otras metodologías que impliquen que no tener en cuenta el contexto de los píxeles.
+	
+	Con respecto a este apartado se puede considerar como comprobado, analizando las métricas de los modelos explorados podemos ver que las mejores métricas obtenidas han sido las de los modelos predichos. Además se han probado diversos modelos, si bien es cierto que SVM no ha sido posible el tiempo de entrenamiento excesivo ya lo hubiera descartado como viable.
+	
+	\item Exponer los conocimientos extraídos en un notebook de Python, lo cuál facilitará la trasmisión y la manipulación de estos.
+	
+	El Notebook ha sido realizado con éxito.
+	
+	\item Generar un repositorio dónde almacenar dicho notebook con la estructura definida para una poder ejecutar de forma simple el cuaderno.
+	
+	El repositorio ha sido creado, en el apartado 5\ref{sect:datosPrueba} se explica como han de almacenarse los archivos y la URL del repositorio es: 
+	\href{https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes}{Repositorio} 
+	
+	\item Tratar de optimizar en la medida de lo posible los parámetros del modelo para maximizar su eficiencia.
+	
+	Si bien es cierto que pudieran obtenerse mejores resultados, se consideran suficientes las pruebas realizadas, ahora en este punto es en el que más se puede mejorar, cosa de la que hablaremos en el apartado de Líneas de trabajo futuras\ref{sect:lineasFuturas}.
+		
+\end{itemize}
+
+\section{Líneas de trabajo futuras}\label{sect:lineasFuturas}
+Respecto a las posibles mejoras y líneas de trabajo futuras:
+\begin{itemize}
+	\item Probar a entrenar el modelo con un número mayor de imágenes y una mayor variedad.
+	
+	Si bien es cierto que los resultados son suficientes con el número de imágenes reducido que se han utilizado, es posible que al usar una mayor parte del Dataset los resultados puedan ser mejores.
+	
+	\item Probar más parámetros.
+	
+	Dentro de los parámetros que se pueden manipular para cambiar los resultados en este trabajo sobre todo se han probado las épocas, el número de bandas y la posibilidad de hacer dropout o no, pero como hemos visto en el apartado 3\ref*{sect:redesConvolucionales} hay muchos hiperparámetros que se pueden modificar además de alguno más derivado de la definición del modelo o incluso el umbral de corte.
+
+	\item Hacer un programa que sea capaz de analizar imágenes.
+	
+	Puede ser interesante hacer un programa que sea capaz de dada una imagen satélite haga la separación. También se podrían automatizar las descargas de los documentos del ftp para no requerir de almacenarlos en memoria.
+		
+\end{itemize}

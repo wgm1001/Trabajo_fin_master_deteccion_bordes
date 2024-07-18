@@ -1,0 +1,40 @@
+\chapter{Trabajos relacionados}
+En este apartado se comentarán algunos de los trabajos relacionados y experimentos similares.
+
+\section{AI4Boundaries: an open AI-ready dataset to map field boundaries with Sentinel-2 and aerial photograph\cite{AI4boundaries}}
+
+Este es el artículo sobre el que se basa este trabajo, ya que es el que proporciona los materiales para el entrenamiento de los modelos sin los cuales esta tarea hubiera muchísimo más ardua y probablemente de una calidad muy inferior.
+
+El artículo presenta AI4Boundaries, un conjunto de datos abierto y preparado para el aprendizaje automático que tiene como objetivo facilitar la detección de límites de campos agrícolas utilizando imágenes de satélite Sentinel-2 y fotografías aéreas.
+\begin{itemize}
+
+	\item El conjunto de datos incluye dos componentes principales:
+	Una composición mensual de imágenes Sentinel-2 a una resolución de 10 metros, lo que permite el análisis a gran escala.
+	
+	\item Ortofotografías aéreas a una resolución de 1 metro, lo que posibilita el análisis a escala regional.
+\end{itemize}
+
+Los datos de etiquetado de los límites de campos provienen de fuentes públicas, como el Sistema Integrado de Gestión y Control (SIGC) de varios países europeos, como Austria, Cataluña, Francia, Luxemburgo, Países Bajos, Eslovenia y Suecia.
+
+El conjunto de datos ha sido diseñado para ser utilizado en el entrenamiento de modelos de aprendizaje automático que puedan realizar la delineación automática de los límites de campos agrícolas.
+
+\section{U-Net: Convolutional Networks for Biomedical Image Segmentation\cite{Unet}}
+
+Este es el artículo que da la arquitectura del modelo principal de este trabajo, la red convolucional de tipo U-Net. Esta está diseñada para la segmentación de imágenes biomédicas. Se basa en la red convolucional completamente conectada (FCN) y se modifica para funcionar con pocos datos de entrenamiento y producir segmentaciones más precisas.
+
+Este artículo trata de resolver el problema de que el entrenamiento de redes profundas requiere generalmente miles de muestras de entrenamiento etiquetadas. Sin embargo, en tareas biomédicas, como la segmentación de imágenes, es difícil obtener tantos datos etiquetados.
+
+Esto lo soluciona a través de las de dos fases:
+
+\begin{itemize}
+	
+	\item{Contracción}: Un camino de contracción que captura el contexto mediante la aplicación repetida de convoluciones 3x3, seguidas de ReLU introduciendo no linealidad al modelo y operaciones de pooling máximo de 2x2 con un salto de 2 para la reducción de la información espacial y el aumento de la información de características. A medida que el modelo pasa por estas fases le pasa el mapa de características resultante a la capa correspondiente en la segunda fase, siendo esta la capa de su mismo número de mapas de características.
+	
+	\item{Expansión}: Un camino de expansión que combina la información de características y espacial a través de la concatenación de características de alta resolución de la ruta de contracción con las características de alta resolución de la ruta de expansión.
+	En esta fase se aplican las mismas que en la anterior pero en orden inverso.
+	
+\end{itemize}
+
+La U-Net representa una herramienta valiosa para la comunidad científica y los profesionales del sector biomédico, al proporcionar una arquitectura de red que puede ser entrenada de manera eficiente con pocos datos y producir segmentaciones precisas y rápidas.
+
+Este método superó a los métodos anteriores tanto en velocidad como en precisión.

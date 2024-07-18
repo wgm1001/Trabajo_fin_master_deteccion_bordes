@@ -1,0 +1,73 @@
+\chapter{Técnicas y herramientas}
+
+En este apartado se explicarán el grueso de las herramientas utilizadas para este proyecto.
+
+\section{Python}
+El lenguaje de programación que se ha utilizado en este proyecto ha sido Python. Este es un lenguaje de programación creado por Guido van Rossum a principios de los años 90 cuyo nombre está inspirado en el grupo de cómicos ingleses “Monty Python”\cite{gonzalez2011python}. Su sintexis se centra en la legibilidad y la limpieza de código.
+
+El lenguaje tiene las siguientes características:
+\begin{itemize}
+	\item\textbf{Lenguaje interpretado}: Esto significa que para su ejecución requiere otro programa llamado interprete, en lugar de compilar el código a lenguaje máquina y ejecturalo directamente.
+	Esto lo convierte en más flexible y portable. Aunque este tiene muchas de las características de los lenguajes compilados.
+	
+	\item\textbf{Tipado dinámico}: Esto se refiere a que no es necesario declarar los tipos de las variables de manera explícita. Estos tipo se determinarán en tiempo de ejecución. El tipo de las variables puede cambiar con nuevas asignaciones.
+	
+	\item\textbf{fuertemente tipado}: Esto significa que  no se puede tratar a una variable como si tuviera un tipo distinto del que tiene, han de hacerse las transformaciones de forma explícita.
+	
+	\item\textbf{multiplataforma}: Este es capaz de correrse en una gran cantidad de sistemas sin cambios significativos.
+	
+	\item\textbf{Orientado a objetos}: La orientación a objetos es un paradigma de programación en el cual se abstraen los conceptos del mundo real como clases y objetos. Aunque python permite también la programación imperativa y la orientada a aspectos.
+	
+\end{itemize}
+
+Python no es adecuado para la programación de bajo nivel o para aplicaciones en las que el rendimiento sea crítico.
+
+El principal motivo para la selección de este lenguaje es las librerías que hay desarrolladas para el, como Scikit-learn~\ref{sect:scikit}, NumPy~\ref{sect:numpy} o matplotlib~\ref{sect:matplotlib}.
+
+\section{Jupyter Notebook}
+
+Jupyter Notebook\cite{ionosJupyterNotebook} es una aplicación cliente-servidor que permite crear, compartir y visualizar archivos en formato JSON que siguen un esquema de celdas de entrada y salida.
+
+Las celdas contienen textos, código, fórmulas matemáticas e incluso contenido multimedia. Los archivos se guqardan en formato .ipynb.
+
+Estos permite compartir códigos, ejecutarlos de manera sencilla, proporcionar una interfaz cómoda para albergar las visualizaciones además de intercalar textos explicativos con el código.
+
+Jupyter Notebooks tiene un conjunto de núcleos y el Dashboard. Cada núcleo o kernel es el que se encarga de recibir las peticiones, procesar las solicitudes y devolver las respuestas. El kernel por defecto es IPyhton, el cual interpreta comandos de Python, pero se pueden instalar otros tipos de núcleos que permitan trabajar con otros lenguajes como C++, R, Java o Scala entre otros.
+
+Es de uso gratuito.
+
+\section{matplotlib}\label{sect:matplotlib}
+
+Matplotlib\cite{datascientestMatplotlibTodo} es una librería open source de Python que permite visualizaciones de datos. La visualización de datos es una parte clave del análisis de datos, en este proyecto concreto se utiliza para la visualización de las imágenes tanto obtenidas de los datos como generadas por el programa.
+
+Se creó en 2002 por Jhon Hunter como una alternativa a MATLAB para visualizar gráficas. La comunidad lo ha mejorado a lo largo del tiempo. 
+
+Permite generar trazados, histogramas y gráficas de gran calidad. 
+
+\section{NumPy}\label{sect:numpy}
+
+NumPy\cite{bressert2012scipy} es un paquete de Python que incluye operaciones complejas como operaciones con vectores de N dimensiones, matrices, integrales, ecuaciones diferenciales , estadísticas y más. Python tiene implementadas por defecto algunas funciones matemáticas pero no adecuadas para matrices y vectores. NumPy permite el uso eficiente de Python para propósitos científicos.
+
+NumPy se especializa en el procesado de vectores multidimensionales, en los que se permiten operaciones elemento a elemento. Se puede usar álgebra lineal si es necesario sin modificar previamente los vectores. Se pueden redimensionar las matrices de manera dinámica. Esto es más rápido y eficiente que en otros lenguajes ya que evita el tener que crear nuevos vectores. 
+
+Los vectores de NumPy permiten incrustar código en C/C++/Fortran, lo que aumenta sobremanera su eficiencia.Una operación con ndarray es 25 más rápido que un bucle de python. Los ndarrays solo pueden almacenar un tipo de dato por columna. 
+ 
+\section{Scikit-learn}\label{sect:scikit}
+
+Scikit-learn es un modulo de Python que integra un amplio rango de algoritmos para problemas de aprendizaje tanto supervisado como no supervisado. Este se enfoca como un paquete que acerca las técnicas de \textit{machine learning} a personas no especializadas en el campo, de forma general en un lenguaje de alto nivel.  Usa una interfaz orientada a las tareas.
+
+Tiene dependencias externas mínimas y se distribuye  con una licencia de BDS simplificada, es decir como un software libre.
+
+También incorpora código compilado y librerías en C++ para aumentar la eficiencia. Para reducir las barreras de entrada reducen al mínimo los objetos propios y trata de utilizar los objetos de NumPy para almacenar datos.
+
+Proporciona una documentación muy completa con tutoriales varios.
+
+\section{TensorFlow y Keras}
+
+TensorFlow\cite{TensorYKeras}\cite{TensorYKeras2} es uno de los frameworks de inteligencia artificial más conocidos y utilizados. fue desarrollado originalmente por el grupo de Google Brain. Fue diseñado para facilitar la investigación en \textit{machine learning} y realizar más rápida la transición de un prototipo a un sistema de producción. 
+
+Keras es una API de alto nivel para redes neuronales. El código se especifica en Pyhton y es capaz de ejecutarse en tres entornos : TensorFlow, CNTK o Theano. Se puede cambiar de motor de ejecución sin alterar el código. TensorFlow ha decidido adoptar Keras como su API principal. Los modelos de Keras se pueden crear mediante APIs secuenciales de 'tf.keras.Sequential' o mediante la API funcional de Keras 'tf.keras.Model'.
+
+TensorFlow proporciona un grupo de paquetes relacionados con la creación de redes neuronales. Estos facilitan la creación y personalización de las capas (tf.keras.layers), datasets (tf.data), métricas (tf.keras.metrics), funciones de perdida (tf.keras.losses) y columnas de características (tf.feature\_column).
+
+
