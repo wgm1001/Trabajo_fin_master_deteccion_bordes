@@ -3,7 +3,7 @@
 En este apartado se explicaran el grueso de los conceptos necesarios para la correcta comprensión del trabajo y el material. Teniendo tanto en cuenta el funcionamiento de los mecanismos internos como los conceptos abstractos.
 
 \section{Visión e imágenes}
-Se empezará definiendo lo que se entiende por imágenes y como se componen estas. Una imagen es una representación visual de un objeto, escena o perspectiva, ya sea de forma física (como una fotografía) o digital (como una imagen digital). Para comprender cómo se compone una imagen, es crucial explicar el funcionamiento de la visión humana.
+Una imagen es una representación visual de un objeto, escena o perspectiva, ya sea de forma física (como una fotografía) o digital (como una imagen digital). Para comprender cómo se compone una imagen, es crucial explicar el funcionamiento de la visión humana.
 
 La visión \cite{formaciongraficaModeloRGB} es un proceso complejo que se produce cuándo determinados fotorreceptores en el interior de nuestros ojos, llamados conos y bastones, reciben la luz reflejada de los objetos, esta luz reflejada para que sea visible por nuestros ojos tiene que venir reflejada entre los valores de frecuencia de 460 nanómetros (nm) y 780 nm, correspondiente al espectro visible para el ojo humano. 
 
@@ -15,7 +15,7 @@ Esto es relevante para este trabajo ya que nos permite comprender como las imág
 
 Aunque estas capas solo son una selección de las frecuencias reflejadas por como funciona el ojo humano, pero realmente existen otros tipos de radiación electromagnética que se encuentran fuera de este espectro visible.Algunas de estas radiaciones pueden ser captadas por sensores especializados y utilizadas en diversos campos, como la teledetección y la investigación científica.
 
-Concretamente en este trabajo se utiliza una banda más, de una longitud de onda mayor que el rojo, es decir una frecuencia infrarroja. El satélite Sentinel 2 es capaz de recoger hasta 13 bandas\cite{gisgeographySentinelBands}, con distintas resoluciones y longitudes de onda, de las cuales se utilizaran 4 y una composición entre varias de ellas:
+Concretamente en este trabajo se utiliza una banda más, de una longitud de onda mayor que el rojo, es decir una frecuencia infrarroja. El satélite Sentinel 2 es capaz de recoger hasta 13 bandas \cite{gisgeographySentinelBands}, con distintas resoluciones y longitudes de onda, de las cuales se utilizaran 4 y una composición entre varias de ellas:
  \begin{itemize}
 	\item\textbf{Banda 2}: Esta banda es la correspondiente al color azul, con una frecuencia de onda de 490 nm.
 	
@@ -42,13 +42,11 @@ La inteligencia artificial \cite{rouhiainen2018inteligencia} consiste en program
 La inteligencia artificial se usa en la actualidad para multitud de tareas:
 
 \begin{itemize}
-	\item Reconocimiento de imágenes estáticas, clasificación y .
+	\item Reconocimiento de imágenes estáticas, clasificación y etiquetado.
 	
 	\item Mejoras del desempeño de la estrategia algorítmica comercial.
 	
 	\item Procesamiento eficiente y escalable de datos de pacientes.
-	
-	\item Detección y clasificación de objetos.
 	
 	\item Distribución de contenido en las redes sociales
 	
@@ -56,7 +54,7 @@ La inteligencia artificial se usa en la actualidad para multitud de tareas:
 	
 \end{itemize}
 
-El aprendizaje automático o \textit{Machine Learning}\cite{ibmQuMachine} es uno de los principales enfoques de la inteligencia artificial, este utiliza algoritmos para aprender de conjuntos de datos. Este se divide en tres categorías de manera principal:
+El aprendizaje automático o \textit{Machine Learning} \cite{ibmQuMachine} es uno de los principales enfoques de la inteligencia artificial, este utiliza algoritmos para aprender de conjuntos de datos. Este se divide en tres categorías de manera principal:
 
 \begin{itemize}
 	\item\textbf{Aprendizaje supervisado}: En este tipo de aprendizaje los algoritmos usan datos previamente etiquetados, es decir que ya tienen una categoría asignada. Esto hace que el modelo a entrenar extraiga las distintas características que convierten el dato de entrada en la categoría de salida. Este tipo de algoritmos se utilizan para la predicción y clasificación de datos. Este es el que se ha utilizado para este trabajo. El deep learning se encuadra dentro de este apartado. Algunos de los métodos más utilizados de este tipo de aprendizaje son las redes neuronales, los clasificadores bayesianos, la regresiones lineales, los bosques aleatorios y las máquinas de vectores de soporte.
@@ -69,12 +67,12 @@ El aprendizaje automático o \textit{Machine Learning}\cite{ibmQuMachine} es uno
 
 También cabe destacar el Aprendizaje por refuerzo, el cual funciona como un mecanismo de condicionamiento operante, dónde al algoritmo se le entrena sobre la marcha validando si ha realizado la predicción correcta o no y ajustando este su algoritmo interno para aprender en función de esto.
 
-Es relevante comprender para el contexto de este trabajo que en la clasificación de imágenes binaria, como es la que se da, las etiquetas consisten en una capa de la imagen, llamada \textit{ground truth}, con los valores de 0 y 1 para cada pixel en función de la salida esperada.
+Es relevante comprender para el contexto de este trabajo que en la clasificación de imágenes binaria, o expresado de otra manera una segmentación de la imagen, las etiquetas consisten en una capa de la imagen, llamada \textit{ground truth}, con los valores de 0 y 1 para cada pixel en función de la salida esperada.
 
 \subsection{Métricas de aprendizaje supervisado}
 La evaluación de estos modelos de aprendizaje supervisado se puede hacer con diversos métodos, aunque las medidas más básicas son las que se detallaran en este apartado.
 
-La base de todas las métricas\cite{themachinelearnersMtricasClasificacin} que se van a detallar es la \textbf{matriz de confusión}. Esta se compone por cuatro valores en una matriz 2 x 2.
+La base de todas las métricas \cite{themachinelearnersMtricasClasificacin} que se van a detallar es la \textbf{matriz de confusión}. Esta se compone por cuatro valores en una matriz 2 x 2 al haber dos clases entre las que segmentar.
 Estos valores son:
 \begin{itemize}
 	\item True Positives: Este está en la primera posición de la matriz, se corresponde con el número de predicciones que han sido predichas como positivas de manera correcta. En adelante se llamará TP. 
@@ -96,7 +94,7 @@ Esta es la principal medida. La precisión representa el porcentaje total de val
 \end{equation}
  
 \subsection{Precisión}
-Esta medida de mayor valor a los valores TP, ya que lo que nos plantea es que porcentaje de valores han sido correctamente calificados como positivos sobre todos los valores calificados como positivos. La fórmula por tanto es:
+Esta medida prioriza el valor de los TP, ya que lo que nos plantea es que porcentaje de valores han sido correctamente calificados como positivos sobre todos los valores calificados como positivos. La fórmula por tanto es:
 
 \begin{equation}
 	Precisión=\frac{TP}{TP+FP}
@@ -117,7 +115,7 @@ Esta métrica es útil en conjuntos de datos desbalanceados. Esta combina el rec
 Estás son las métricas que se han utilizado para medir este proyecto, aunque hay otras médidas muy usadas que también definiré.
 
 \subsubsection{Curva ROC}
-La curva ROC (Receiver Operating Characteristic) es un gráfico muy utilizado para problemas de clasificación. Esta representa el porcentaje de verdaderos positivos contra el ratio de falsos positivos. Lo que diferencia a esta métrica de las demás es que el umbral por el que se clasifica un elemento como 0 o 1 se va modificando para generar todosl los valores de la gráfica.
+La curva ROC (Receiver Operating Characteristic) es un gráfico muy utilizado para problemas de clasificación. Esta representa el porcentaje de verdaderos positivos contra el ratio de falsos positivos. Lo que diferencia a esta métrica de las demás es que el umbral por el que se clasifica un elemento como 0 o 1 se va modificando para generar todos los valores de la gráfica. El valor óptimo del umbral será el que más cercano se encuentre respecto a la esquina izquierda superior del gráfico.
 
 \subsubsection{AUC}
 Esta métrica es derivada de la anterior, la métrica AUC (Area Under Curve) o área bajo la curva. El valor de esta métrica está entre 0 y 1 siendo 0 una clasificación aleatoria y 1 una clasificación perfecta. Esta se calcula mediante integrales.
@@ -127,7 +125,7 @@ Esta métrica es derivada de la anterior, la métrica AUC (Area Under Curve) o �
 Ahora se explicarán en profundidad algunos de los algoritmos previamente mentados, concretamente los relacionados con este trabajo. 
 
 \subsection{KNN}
-KNN\cite{ibmQuKNN} son las siglas para \textit{K Nearest Neighbours}, es decir k vecinos más cercanos, este clasificador de aprendizaje supervisado utiliza la proximidad para hacer clasificaciones o predicciones, aunque generalmente se suele utilizar para clasificación. 
+KNN \cite{ibmQuKNN} son las siglas para \textit{K Nearest Neighbours}, es decir $K$ vecinos más cercanos, este clasificador de aprendizaje supervisado utiliza la proximidad para hacer clasificaciones o predicciones, aunque generalmente se suele utilizar para clasificación. 
 
 KNN forma parte de la familia de algoritmos de aprendizaje perezoso, ya que en la fase de entrenamiento no realiza cálculos, sino que almacena las instancias, realizándose estos cálculos en la fase de predicción.
 
@@ -146,7 +144,7 @@ Las ventajas y desventajas de este algoritmo son:
 	
 	\item{Gran adaptabilidad}: Ya que al introducir siempre nuevas instancias da una mayor versatilidad.
 	
-	\item{Pocos hiperparámetros}: Ya que los unicos parámetros que requiere son el valor de K y la medida de distancia.
+	\item{Pocos hiperparámetros}: Ya que los unicos parámetros que requiere son el valor de $K$ y la medida de distancia.
 \end{itemize}
 
 \textbf{Desventajas}:
@@ -156,11 +154,11 @@ Las ventajas y desventajas de este algoritmo son:
 	
 	\item{Mal funcionamiento para alta dimensionalidad}: Aumentando el número de errores acorde a la dimensionalidad.
 	
-	\item{Propensión al sobreajuste}: Por su funcionamiento tiende a sobreajustarse en función del valor k, en especial si es muy baj, pero en caso de tener un k muy alto tiende a ajustarse mal alos datos 
+	\item{Propensión al sobreajuste}: Por su funcionamiento tiende a sobreajustarse en función del valor $K$, en especial si es muy bajo, pero en caso de tener un $K$ muy alto tiende a ajustarse mal alos datos 
 	
 \end{itemize}
 
-Su funcionamiento consiste en calcular la distancia de la nueva instancia con el resto de las del modelo y entre las k más cercanas ver que clase es la mayoritaria, esta será la clase predicha.
+Su funcionamiento consiste en calcular la distancia de la nueva instancia con el resto de las del modelo y entre las $K$ más cercanas ver que clase es la mayoritaria, esta será la clase predicha.
 
 Algunas de las métricas mas usadas para el cálculo de distancias son:
 
@@ -177,13 +175,13 @@ Algunas de las métricas mas usadas para el cálculo de distancias son:
 	\end{equation}
 	n = número de dimensiones del punto.
 	
-	\item\textbf{Distancia minkowski}: Esta es la utilizada en el experimento. Es la generalización de las dos anteriores, siendo la p en Manhattan  1 y en la euclídea 2. La formula por tanto es:
+	\item\textbf{Distancia Minkowski}: Esta es la utilizada en el experimento. Es la generalización de las dos anteriores, siendo la p en Manhattan  1 y en la euclídea 2. La formula por tanto es:
 	\begin{equation}
 		d(a,b)=(\sum_{i=1}^{n}|a_{i}-b_{i}|^p)^{\frac{1}{p}}
 	\end{equation}
 	n = número de dimensiones del punto.
 	
-	\item\textbf{Distancia de hamming}:  Esta técnica es utilizada de forma normal para vectores booleanos o cadenas, buscando identificar igualdades i diferencias. Es el sumatorio de los items diferentes.
+	\item\textbf{Distancia de Hamming}:  Esta técnica es utilizada de forma normal para vectores booleanos o cadenas, buscando identificar igualdades i diferencias. Es el sumatorio de los items diferentes.
 	
 \end{itemize}
 
@@ -201,7 +199,7 @@ Se utiliza entre otros usos para:
 \end{itemize}
 
 \subsection{Random Forest}
-Random Forest\cite{ibmWhatRandom} o árboles aleatorios es un algoritmo supervisado basado en la combinación de diversos árboles de decisión binarios para alcanzar un único resultado.
+Random Forest \cite{ibmWhatRandom} o árboles aleatorios es un algoritmo supervisado basado en la combinación de diversos árboles de decisión binarios para alcanzar un único resultado.
 
 Es un algoritmo popular debido a su flexibilidad y facilidad de uso.
 
@@ -209,7 +207,7 @@ Para comprender el Random Forest es necesario comprender antes los árboles de d
 
 Los árboles de decisión binarios se basan en respuestas binarias a preguntas, dónde separan en ramas u hojas los caminos en función de si esa repuesta lleva a otra pregunta (rama) o a una clasificación final (hoja). De esta manera, a base de condiciones se van clasificando las distintas instancias que le llegan al árbol. Las ramas se pueden configurar para definir cuales son las condiciones que se consultan en cada rama, aunque son propensos a problemas como sesgos y sobreajustes. Estos suelen cubrir todo el espacio de posibilidades.
 
-Es un método de aprendizaje por conjuntos, por lo tanto se compone de varios clasificadores que se agregan para identificar el resultado más popular. Estos se entrenan de manera independiente y después se promedian los resultados.
+Es un método de aprendizaje por multiclasificador, lo que significa que se compone de varios clasificadores que se agregan para identificar el resultado más popular. Estos se entrenan de manera independiente y después se promedian los resultados.
 
 Ahora, el algoritmo del Random Forest consiste en muchos arboles binarios con características aleatorias, es decir con condicionantes aleatorios. Estos por lo tanto no tienen porque cubrir todo el espacio de probabilidades.
 
@@ -256,7 +254,7 @@ Se utiliza entre otros usos para:
 
 Si bien esta técnica se ha demostrado no ser adecuada para su utilización en este trabajo, al requerir de un tiempo de entrenamiento excesivo, se explicará al haber sido una de las pruebas realizadas.
 
-Una máquina se vectores de soporte\cite{ibmWhatSupport}, en adelante SVM siendo estas las siglas de \textit{Support Vector Machine},  es un algoritmo de aprendizaje automático supervisado que clasifica los datos encontrados en una línea o hiperplano óptimo que maximice la distancia entre cada clase en un espacio N-dimensional. Esto significa que clasifican encontrando lo que diferencia a unas clases de otras dentro de un espacio vectorial en el que se representan las características de unas instancias etiquetadas.
+Una máquina se vectores de soporte \cite{ibmWhatSupport}, en adelante SVM siendo estas las siglas de \textit{Support Vector Machine},  es un algoritmo de aprendizaje automático supervisado que clasifica los datos encontrados en una línea o hiperplano óptimo que maximice la distancia entre cada clase en un espacio N-dimensional. Esto significa que clasifican encontrando lo que diferencia a unas clases de otras dentro de un espacio vectorial en el que se representan las características de unas instancias etiquetadas.
 
 Estos se suelen utilizar en problemas de clasificación. La cantidad de características del modelo marca la dimensionalidad del mismo y por tanto de los propios planos que genera como separación.
 
@@ -280,7 +278,7 @@ La regresión de vectores de soporte es una extensión de las SVM dedicada a los
 \subsection{Redes neuronales}
 En este apartado se explicarán los modelos que quedan por mentar que siendo estas, las redes neuronales, las redes neuronales convolucionales y finalmente la red U-Net, que es un tipo de red neuronal convolucional. 
 
-Una red neuronal\cite{ibmQuNeuronal} es un modelo de machine learning las cuales tienen un fundamento similar a las neuronas biológicas.
+Una red neuronal \cite{ibmQuNeuronal} es un modelo de machine learning las cuales tienen un fundamento similar a las neuronas biológicas.
 
 Las redes neuronales son un conjunto de neuronas, compuestas por una o varias neuronas en la capa de entrada, una o varias capas ocultas intermedias y finalmente una capa de salida. 
 
@@ -319,7 +317,7 @@ Existen distintos tipos de redes neuronales, que se usan para fines diferentes. 
 \end{itemize}
 
 \subsection{Redes neuronales convolucionales}\label{sect:redesConvolucionales}
-Como ya se ha mentado, son un subtipo de redes neuronales\cite{ibmQuRedes}, usualmente utilizadas para tareas de clasificación y reconocimiento de imágenes. Son un enfoque escalable para tareas de clasificación de imágenes y reconocimiento de objetos. Estas pueden requerir altos recursos computacionales.
+Como ya se ha mentado, son un subtipo de redes neuronales \cite{ibmQuRedes}, usualmente utilizadas para tareas de clasificación y reconocimiento de imágenes. Son un enfoque escalable para tareas de clasificación de imágenes y reconocimiento de objetos. Estas pueden requerir altos recursos computacionales.
 
 Estas tienen tres tipos de capas:
 \begin{itemize}
@@ -340,7 +338,7 @@ El detector de características es una matriz, normalmente bidimensional de 3x3,
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{filtro_de_red_convolucional}
-	\caption[Ejemplo aplicación de un filtro.]{Ejemplo aplicación de un filtro\cite{cnn}.}
+	\caption[Ejemplo aplicación de un filtro.]{Ejemplo aplicación de un filtro \cite{cnn}.}
 	\label{fig:filtro}
 \end{figure}
 
@@ -384,13 +382,13 @@ Esta capa realiza la predicción en base a los mapas de características de las 
 \subsection{Red convolucional U-Net}
 En este apartado explicaremos el funcionamiento de la red U-Net, un tipo de red convolucional muy utilizado para análisis de imágenes, el cual ha sido implementado en este experimento. Este es una mejora a otras redes convolucionales aumentando la precisión y pudiendo hacer clasificaciones más ajustadas.
 
-Para comprender correctamente la arquitectura de la red U-Net\cite{Unet} es recomendable ver la figura~\ref{fig:red_U-Net}.
+Para comprender correctamente la arquitectura de la red U-Net \cite{Unet} es recomendable ver la figura~\ref{fig:red_U-Net}.
 
 La red U-Net es una red neuronal convolucional qeu se divide en dos partes, el camino de expansión y el camino de compresión. La red empieza aplicando dos capas convolucionales a la imágen, separando en 64 mapas de características las imágenes y pasando a la siguiente capa estas además de pasandolo a la capa reflejada en el camino de expansión. La siguiente capa es una capa de agrupación, la cual se encarga de reducir su dimensionalidad. este proceso se repite en todo el camino de contracción. Una vez acaba el proceso de contracción se hace el proceso inverso para el proceso de expansión, sumando los mapas de características que se han obtenido en el camino de contracción.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{red_U-Net}
-	\caption[Funcionamiento red U-net.]{Funcionamiento red U-net\cite{Unet}.}
+	\caption[Funcionamiento red U-net.]{Funcionamiento red U-net \cite{Unet}.}
 	\label{fig:red_U-Net}
 \end{figure}
