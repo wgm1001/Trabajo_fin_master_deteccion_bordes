@@ -41,7 +41,7 @@ Las métricas de esta:
 
 ![Segmentación Random Forest](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Clasificacion_Random_Forest.png)
 
-Cónmo se puede ver pasa igual que con el ejmeplo anterior.
+Cómo se puede ver pasa igual que con el ejmeplo anterior.
 Las métricas de este:
 
 ![Métricas Random Forest](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Metricas_Random_Forest.png)
