@@ -17,3 +17,11 @@ En el contexto de la agricultura, la detección precisa de los límites de las p
 En este trabajo, los autores del artículo "AI4Boundaries: an open AI-ready dataset to map field boundaries with Sentinel-2 and aerial photography" presentan un dataset compuesto por imágenes satelitales del satélite Sentinel-2 y ortofotos de varios países europeos, con el objetivo de abordar el reto de la detección automática de los límites de las parcelas. Utilizando este conjunto de datos, se entrenaron diversos modelos de inteligencia artificial, con especial énfasis en una red neuronal convolucional de tipo U-Net, para evaluar su eficacia en la tarea de delimitación de los campos de cultivo.
 	
 Los resultados obtenidos en este estudio sientan las bases para futuras investigaciones en este campo de gran relevancia para el sector agrícola, al demostrar el potencial de las técnicas de aprendizaje automático para automatizar la detección de los límites de las parcelas a partir de imágenes satelitales y aéreas.
+
+---
+
+Como se puede ver en la estructura de archivos este repositorio se divide en dos secciones:
+<ol>
+  <li>Documentación: Carpeta en la que se encuentra la memoria en formato LaTeX y los recursos necesarios para generarla.</li>
+  <li>Notebook: Notebook de Python sobre el que se basa el proyecto, en la memoria se explica en mayuor detalle la configuración necesaria para poder correrlo.</li>
+</ol>
