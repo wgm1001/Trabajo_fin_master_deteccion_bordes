@@ -25,3 +25,29 @@ Como se puede ver en la estructura de archivos este repositorio se divide en dos
   <li>Documentación: Carpeta en la que se encuentra la memoria en formato LaTeX y los recursos necesarios para generarla.</li>
   <li>Notebook: Notebook de Python sobre el que se basa el proyecto, en la memoria se explica en mayuor detalle la configuración necesaria para poder correrlo.</li>
 </ol>
+
+Ahora se mostrarán algunos de los resultados obtenidos por cuaderno:
+
+## La segmentación realizada por el método KNN:
+
+![Segmentación KNN](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Clasificacion_KNN.png)
+
+## Las métricas de esta:
+
+![Métricas KNN](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Metricas_KNN.png)
+
+## La segmentación realizada por el método Random Forest:
+
+![Segmentación Random Forest](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Clasificacion_Random_Forest.png)
+
+## Las métricas de este:
+
+![Métricas Random Forest](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Metricas_Random_Forest.png)
+
+## Las segmentaciones de la red U-Net:
+
+![Segmentaciones U-Net](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/resultados_unet.png)
+
+## Las metricas de la mejor configuración:
+
+![Métricas U-Net](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/metricas_u-net.png)
