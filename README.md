@@ -32,7 +32,8 @@ Ahora se mostrarán algunos de los resultados obtenidos por cuaderno:
 
 ![Segmentación KNN](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Clasificacion_KNN.png)
 
-## Las métricas de esta:
+Cómo se puede ver si bien se puede intuir la imagen en la predicción hay demasiado ruido y podría ser más conexo.
+Las métricas de esta:
 
 ![Métricas KNN](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Metricas_KNN.png)
 
@@ -40,7 +41,8 @@ Ahora se mostrarán algunos de los resultados obtenidos por cuaderno:
 
 ![Segmentación Random Forest](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Clasificacion_Random_Forest.png)
 
-## Las métricas de este:
+Cónmo se puede ver pasa igual que con el ejmeplo anterior.
+Las métricas de este:
 
 ![Métricas Random Forest](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/Metricas_Random_Forest.png)
 
@@ -48,6 +50,7 @@ Ahora se mostrarán algunos de los resultados obtenidos por cuaderno:
 
 ![Segmentaciones U-Net](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/resultados_unet.png)
 
-## Las metricas de la mejor configuración:
+Finalmente la red U-Net es muhco más consistente, limpia y conexa a las anteriores.
+Las metricas de la mejor configuración:
 
 ![Métricas U-Net](https://github.com/wgm1001/Trabajo_fin_master_deteccion_bordes/blob/main/Documentaci%C3%B3n/img/metricas_u-net.png)
